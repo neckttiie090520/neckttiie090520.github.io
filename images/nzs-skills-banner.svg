@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="nzs-skills. You ask for a signup page. The AI says: done, signup works. You say: show me. So it went and used it — creating an account worked, but refreshing the page logs you straight back out, and signing up with an email that already exists crashes the server. Not done. Nothing is done until someone actually looks.">
+  <title>nzs-skills — show me</title>
+
+  <!--
+    The example is a FEATURE, not a bug fix. That is the real shape of the
+    problem: you ask for something, the agent builds the happy path, says
+    "done", and what you actually have is a demo — the first branch works and
+    everything around it is missing or broken.
+
+    Two of three rows fail on purpose. A banner where the checks pass is a QA
+    infographic; the failing rows are the product.
+  -->
+
+  <defs>
+    <style>
+      .paper  { fill: #f2ece1; }
+      .bub    { fill: none; stroke: #1c1a17; stroke-width: 2.6; }
+      .redfill{ fill: #d63c1e; }
+      .redln  { stroke: #d63c1e; stroke-width: 4; fill: none; }
+      .hair   { stroke: #1c1a17; stroke-width: 1; opacity: .26; fill: none; }
+      .row    { stroke: #1c1a17; stroke-width: 1.4; opacity: .28; fill: none; }
+      .t      { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; fill: #1c1a17; }
+      .word   { font-size: 72px; font-weight: 700; letter-spacing: -.03em; }
+      .kicker { font-size: 20px; opacity: .55; letter-spacing: .12em; }
+      .youask { font-size: 25px; opacity: .62; }
+      .claim  { font-size: 40px; font-weight: 700; }
+      .ask    { font-size: 42px; font-weight: 700; fill: #ffffff; }
+      .did    { font-size: 25px; opacity: .6; }
+      .saw    { font-size: 30px; font-weight: 700; }
+      .lab    { font-size: 19px; opacity: .55; letter-spacing: .12em; }
+      .bad    { font-size: 19px; fill: #d63c1e; letter-spacing: .12em; font-weight: 700; }
+      .slog   { font-size: 31px; }
+      @media (prefers-color-scheme: dark) {
+        .paper { fill: #14120f; }
+        .t     { fill: #ece5d8; }
+        .bub   { stroke: #ece5d8; }
+        .hair, .row { stroke: #ece5d8; }
+        .ask   { fill: #14120f; }
+      }
+    </style>
+  </defs>
+
+  <rect class="paper" width="1600" height="800"/>
+
+  <g class="hair">
+    <path d="M40 40h24M52 28v24"/><path d="M1560 40h-24M1548 28v24"/>
+    <path d="M40 760h24M52 748v24"/><path d="M1560 760h-24M1548 748v24"/>
+  </g>
+
+  <text class="t word"   x="90" y="118">nzs-skills</text>
+  <text class="t kicker" x="94" y="157">SKILLS FOR CLAUDE CODE</text>
+
+  <!-- ── the exchange ─────────────────────────────────────────── -->
+  <text class="t youask" x="92" y="232">you: “add a signup page”</text>
+
+  <g>
+    <rect class="bub" x="90" y="256" width="470" height="96" rx="14"/>
+    <path class="bub" d="M136 352 v30 l40 -30"/>
+    <text class="t claim" x="120" y="316">Done! Signup works.</text>
+  </g>
+
+  <g>
+    <rect class="redfill" x="90" y="424" width="360" height="96" rx="14"/>
+    <path class="redfill" d="M404 520 v30 l-40 -30"/>
+    <text class="t ask" x="120" y="486">Show me.</text>
+  </g>
+
+  <text class="t lab" x="94" y="588">— YOU. THIS IS THE WHOLE IDEA</text>
+
+  <!-- ── what it found when it actually used the thing ────────── -->
+  <text class="t lab" x="690" y="206">SO IT WENT AND USED IT</text>
+
+  <g>
+    <text class="t did" x="690" y="262">created an account</text>
+    <text class="t saw" x="690" y="300">that part worked</text>
+    <path d="M1426 268 l20 22 l42 -46" stroke="#1c1a17" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+    <path class="row" d="M690 336h800"/>
+  </g>
+
+  <g>
+    <text class="t did" x="690" y="392">then refreshed the page</text>
+    <text class="t saw" x="690" y="430">logged straight back out</text>
+    <text class="t bad" x="690" y="462">NEVER SAVED THE SESSION — NOT DONE</text>
+    <g transform="translate(1430 380)">
+      <path d="M0 0 l50 50 M50 0 l-50 50" stroke="#d63c1e" stroke-width="11" stroke-linecap="round"/>
+    </g>
+    <path class="row" d="M690 496h800"/>
+  </g>
+
+  <g>
+    <text class="t did" x="690" y="552">signed up with the same email twice</text>
+    <text class="t saw" x="690" y="590">the server crashed</text>
+    <text class="t bad" x="690" y="622">NO ERROR HANDLING — BUG</text>
+    <g transform="translate(1430 540)">
+      <path d="M0 0 l50 50 M50 0 l-50 50" stroke="#d63c1e" stroke-width="11" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <path class="redln" d="M90 682h1420"/>
+  <text class="t slog" x="90" y="738">nothing is done until someone actually looks</text>
+</svg>
